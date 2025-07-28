@@ -1,0 +1,2370 @@
+{
+  "title": "Untitled Document",
+  "outline": [
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "1.1",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Overview:",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "The Movie Manager Application is a React.js-based project that allows users to search for movies via",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "an external API (OMDB API) and also manually add their own favorite movies.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "This system offers a platform for users to view, manage, and organize their movie collections",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "efficiently.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "It combines features of both live search from an API and manual management of user-defined",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "content.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "The application provides the following major functionalities:",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Search and Display Movies fetched from OMDB API.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Add New Movies manually by filling in movie details such as Title, Year, Rating,",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Description, and Poster URL.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Delete Movies from both API-fetched and manually added movie lists.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Custom Movie Management without backend storage, directly handled through the",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "application state.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Responsive and Simple User Interface designed for ease of use across devices.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "By integrating real-time movie search and custom movie addition, the platform ensures that users can",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "create their own personalized movie library, whether based on popular titles or their own creations.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "The system is interactive, intuitive, and scalable, making it a useful tool for movie enthusiasts who",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "want a simple movie management solution.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "1.2",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Problem Definition",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Today, movie fans often look for platforms where they can search, store, and organize their favorite",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "movies conveniently.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "While there are many apps available for browsing movies, most platforms do not offer users the",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "ability to manually add and manage their own movies unless they create an account or subscribe to a",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "service.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "There is a need for a simple application that allows:",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Searching movies without login/registration.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Adding custom movie entries without database complications.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Managing both API fetched and manually added movies together.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Deleting movies easily from the list.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Thus, the Movie Manager Application aims to solve this problem by providing a lightweight, easy-to-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "use solution for searching, adding, and managing movie collections, without the need for a backend",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "server.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "1.3",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Scope of Proposed System:",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "The proposed system is developed to fulfill the following needs:",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Movie Search Module:",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Users can search movies by title using the OMDB API.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Complete movie details like Title, Year, Rating, Poster, and Description are displayed.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Movie Addition Module:",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Users can add new movies manually with their own details.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Poster URL can be customized, or a default image is used if not provided.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Movie Deletion Module:",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Movies, whether fetched via API or added manually, can be deleted easily.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "State Management:",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "The system uses React\u2019s useState to manage movies without backend storage.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "User Experience (UX):",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Simple form inputs.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Dynamic movie display.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Responsive layout for mobile and desktop use.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Additional Scope:",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Customization:",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Users can add movies that may not be available in public databases, allowing for a truly",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "personalized movie list.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Scalability:",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Though initially built without backend, the system can easily be extended with local storage,",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "databases, or user accounts in the future.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Flexibility:",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "This app structure can be extended to create a full-fledged movie library, a wishlist manager,",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "or a movie recommendation system.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "2.1",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Introduction:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Requirement gathering is a crucial phase in the software development process where the system's",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "requirements are identified, documented, and agreed upon. This step ensures that the project is built",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "according to the user's needs and expectations. For the Movie Manager Application, the following",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "requirements have been identified:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "2.2",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Functional Requirements:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Movie Search Functionality:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Users should be able to search for movies by title using the OMDB API.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Display movie details like title, year, description, rating, and poster image.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Add New Movie Functionality:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Users can manually add movies by providing details such as title, year, rating,",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "description, and poster URL.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "There should be a default poster image used if the poster URL is not provided.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Delete Movie Functionality:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Users can delete movies from both the fetched movie list and the manually added",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "movie list.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "State Management:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "The system will utilize React\u2019s",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "to store movie data temporarily in the",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "useState",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "application state, without the need for backend storage.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "User Interface:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "The UI should be responsive and simple, providing a seamless experience on both",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "desktop and mobile devices.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "The UI should be intuitive for adding, viewing, and deleting movies.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Custom Movie Management:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Users should have the option to add and delete their own movies without relying on a",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "database.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "2.3",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Non-Functional Requirements:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Performance:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "The application should load quickly, even with multiple movies in the list.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Security:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "No sensitive user data is handled, but any future user authentication should be secure.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Usability:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "The system should have an intuitive interface with easy-to-use controls.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "The design should be simple and user-friendly to appeal to movie enthusiasts.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Scalability:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "The system should be easily extendable. For example, adding user authentication or",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "integrating a backend for storing movie lists can be done in the future.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Compatibility:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "The app should work across all modern browsers and be fully responsive on mobile",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "devices.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "2.4",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "System Requirements:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Software Requirements:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Operating System: Windows, macOS, or Linux",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Programming Language: React.js (JavaScript)",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Web Browsers: Chrome, Firefox, Edge, Safari",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Hardware Requirements:",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Processor: Intel Core i3 or equivalent (minimum)",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "RAM: 4 GB (minimum)",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Storage: 100 MB for app files",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "2.5",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Data Requirements:",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "The data for the movie list will be fetched from the OMDB API, which provides details such",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "as title, year, rating, poster image, and description.",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "For manually added movies, data such as title, description, rating, and poster URL will be",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "stored in the application state.",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "3.1 System Development Model:",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "The",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "System Development Model",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "outlines the approach used for developing the Movie Manager",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Application. For this project, we have chosen the",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Agile Development Model",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "due to its iterative,",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "user-centric approach and its ability to adapt to changing requirements throughout the development",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "process.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "3.1.1 Agile Development Model",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Agile methodology is an iterative and incremental approach to software development, focusing on",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "flexibility, collaboration, and delivering functional portions of the application at regular intervals. It",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "is well-suited for projects like the Movie Manager Application, which requires continuous user",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "feedback and frequent updates.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Key Characteristics of the Agile Model:",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Iterations (Sprints):",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "The development is divided into small, time-boxed iterations (also",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "called sprints) that usually last 1-2 weeks. Each sprint focuses on delivering specific features.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Frequent Releases:",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "After each sprint, a working version of the application is released with",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "the implemented features.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Customer Feedback:",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "After each release, the development team gathers feedback from users",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "and stakeholders to refine and improve the product.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Flexibility and Adaptation:",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "The Agile model allows for changes in project requirements",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "even late in the development process, ensuring that the final product better meets user needs.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "3.1.2 Phases in the Agile Development Model",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "The development process follows several phases, each contributing to the iterative process of refining",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "and building the Movie Manager Application. These phases include:",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Planning Phase:",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Requirements are gathered from stakeholders (such as users and developers) to create",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "a product backlog.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "The features are prioritized, and user stories are defined for each sprint.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Design and Development Phase:",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "The initial iteration starts with the design of the Movie Manager Application's basic",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "structure, including the user interface, state management, and core functionalities",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "(movie search, adding, and deleting movies).",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Development begins by implementing the most critical features first, such as fetching",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "movie data from the OMDB API and managing the movie list in the application state.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Testing Phase:",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Each iteration includes testing of the features developed during the sprint. Unit testing",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "and integration testing are performed to ensure the correct functionality of each",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "feature.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Continuous integration tools are used to ensure that the codebase remains stable after",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "each change.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Feedback and Refinement Phase:",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "After each sprint, feedback is gathered from stakeholders, and the application is",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "refined based on the feedback. This ensures the features align with user needs and",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "expectations.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "New features, improvements, and bug fixes are incorporated into future sprints.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Release Phase:",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "At the end of each sprint, a working version of the application is released. This version",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "includes all the features implemented during the sprint and is made available to users",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "for evaluation.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Deployment and Maintenance Phase:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "After the final iteration, the Movie Manager Application is deployed for public use.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "The deployment is followed by ongoing maintenance to fix bugs, enhance features,",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "and address new requirements as they arise.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "3.1.3 Why Agile for the Movie Manager Application?",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "User-Centric:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Agile development emphasizes collaboration with users throughout the",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "project. This allows the development team to continuously gather user feedback and adjust the",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "application to meet evolving needs.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Quick Iterations:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "The iterative approach allows for rapid development and frequent releases,",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "enabling users to experience new features sooner.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Flexible Design:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "The flexibility of Agile ensures that the application can adapt to new",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "requirements as they emerge, such as adding user authentication or integrating a backend for",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "storing movie lists in future sprints.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Risk Reduction:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "By testing and releasing features frequently, the Agile model minimizes the",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "risk of major failure, as issues can be identified and resolved early in the development",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "process.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "3.1.4 Agile Artifacts",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Product Backlog:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "A prioritized list of all features, enhancements, and tasks needed for the",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Movie Manager Application. This backlog is continuously updated based on user feedback",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "and project progress.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Sprint Backlog:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "A subset of the product backlog selected for a specific sprint. It includes the",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "features and tasks that will be developed during that sprint.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Increment:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "The working version of the application developed during each sprint. The",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "increment represents all the features and improvements completed in that sprint, ready for",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "release or further testing.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "3.2 System Architecture and Design:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "In this section, we outline the high-level architecture and design principles followed for the Movie",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Manager Application.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "System Architecture:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "The application follows a",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "client-server architecture",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ". The frontend of the Movie Manager",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Application is built using",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "React.js",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "(JavaScript), while the backend (for future expansion) could be",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "built using Node.js or another server-side technology. For this initial version, no backend is",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "implemented, and the movie data is fetched directly from the OMDB API.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "The system follows the",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "MVC (Model-View-Controller)",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "design pattern:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Model:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Handles the data logic and structure, such as storing movie details.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "View:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "The user interface (UI), built with React, displays the data to the user.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Controller:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "The logic that manages the interaction between the view and the model. In this",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "case, React components handle user actions, such as adding or deleting movies.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Design Considerations:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "UI/UX Design:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "The user interface is designed to be simple, intuitive, and responsive. The",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "application must work seamlessly on both desktop and mobile devices.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "State Management:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "The system uses",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "React\u2019s useState",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "hook to manage the movie data",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "locally. This enables users to add, delete, and modify the movie list without needing a",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "backend or database.",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Performance:",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "The system should be optimized for performance, ensuring that the movie list",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "is loaded quickly and the application remains responsive even with multiple movies in the list.",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Security:",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "As no sensitive user data is handled in this version of the application, security",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "considerations focus on ensuring that the application remains stable and free from security",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "vulnerabilities.",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "3.3 Data Flow:",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Data Flow Diagram (DFD):",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "The",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Data Flow Diagram (DFD)",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "outlines how data moves through the system and interacts with",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "various components. In this system, data primarily flows between the frontend (React.js) and the",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "OMDB API.",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "User Actions:",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Users can search for movies, view details, add their own movies, and delete movies",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "from the list.",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "OMDB API Interaction:",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "When a user searches for a movie, the system makes an API request to the OMDB",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "API to fetch movie data.",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "The movie data is then displayed on the frontend, including title, year, description,",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "rating, and poster image.",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "State Management:",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Data is temporarily stored in the application state using React\u2019s useState hook.",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "When a user adds a new movie, the movie is stored in the state, and the UI is updated",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "accordingly.",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "When a user deletes a movie, the state is updated to remove the movie from the list.",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 13
+    },
+    {
+      "level": "H1",
+      "text": "4.3",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 14
+    },
+    {
+      "level": "H1",
+      "text": "4.4",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Search",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Add/Delete",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Movies",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Movie",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "MOVIE",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "RATING",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "POSTER",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "YEAR",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "TITLE",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 15
+    },
+    {
+      "level": "H1",
+      "text": "4.5",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "IMPLEMENTATION",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "1.1",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Hardware and Software Requirement",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Hardware Requirements:",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Processor: Intel i3 or higher, 2 cores",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "RAM: 4GB minimum, 8GB recommended",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Storage: 10GB free space, SSD recommended",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Display: 1366x768 resolution minimum, Full HD preferred",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Internet Connection: Required for API and cloud access",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Software Requirements:",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Operating System: Windows 10+, macOS Mojave+, Linux (Ubuntu 20.04+)",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Web Browser: Google Chrome, Mozilla Firefox, Microsoft Edge",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Text Editor/IDE: Visual Studio Code, Sublime Text, or Atom",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Node.js & npm: Latest LTS version for React setup",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Vite: For fast project setup",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Version Control: Git for version control, GitHub or GitLab for repository hosting",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "API: OMDB API for movie data (requires API key)",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "React Framework: React.js, React Router (optional)",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Other Dependencies: Tailwind CSS/Bootstrap, Axios/Fetch API, React Hooks, ESLint,",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Prettier",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "5.2 Snapshot:-",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "TEST",
+      "page": 20
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 20
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 20
+    },
+    {
+      "level": "H3",
+      "text": "6.1Software Testing/Validation",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Software testing and validation ensure that the application works as intended and meets the",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "requirements. Below is the approach you can follow for testing your Movie List App:",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Unit Testing:",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Test individual components/functions (e.g., fetchMovies, handleAddMovie).",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Ensure correct behavior of small units.",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Integration Testing:",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Test if different parts of the app work together (e.g., adding a movie updates the list).",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Verify theme toggle interacts with components.",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Functional Testing:",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Test core features like search, add/delete movie.",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Ensure the app displays correct movie details.",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Usability Testing:",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Test if the app is user-friendly and easy to navigate.",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Check if UI is intuitive, and dark mode is functional.",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Performance Testing:",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Test load time and app performance with many movies.",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Ensure movie addition/deletion doesn\u2019t slow down the app",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Compatibility Testing:",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Test the app on different browsers (Chrome, Firefox, etc.).",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Ensure responsiveness across devices (mobile, desktop).",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Regression Testing:",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Re-test after changes to ensure no old features are broken.",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "User Acceptance Testing (UAT):",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Get user feedback to ensure the app meets their needs before deployment.",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "6.2",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Test Case",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Test",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Status",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Test Description",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Test Steps",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Expected Result",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Case ID",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "(Pass/Fail)",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "1. Open the app.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "1. Open the app.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "1. Open the app.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Test Search",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "2. Enter a movie title in the",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "The movie list should",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "TC01",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Pass",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Pass",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Pass",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Functionality",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "search bar.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "display the searched movie.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Functionality",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Functionality",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "3. Press Enter.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "1. Click on the \"Add",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Movie\" button.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Movie\" button.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Test Add Movie",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "2. Fill out the movie",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "The new movie should",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "TC02",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Paas",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "details.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "appear in the movie list.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "3. Click on the \"Add",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "The selected movie should",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Test Delete Movie",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "2. Select a movie to delete.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "TC03",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "be removed from the movie",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "3. Click on the \"Delete\"",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "list.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "button for that movie.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "2. Click on the \"Toggle",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "The app should switch",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Test Dark Mode",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Dark Mode\" button.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "TC04",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "between light and dark",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Toggle",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "3. Observe the page's",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "mode.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "background color and text",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "color.",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "Conclusion",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "In conclusion, the Movie List project demonstrates an effective use of React to manage and display a",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "list of movies, allowing users to search, add, and delete movies with real-time updates. The",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "application also integrates features like dark mode, ensuring a user-friendly interface, and interacts",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "with an external API (OMDB) to fetch movie data. Throughout the development process, key",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "concepts such as state management, event handling, and conditional rendering have been",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "implemented to build a responsive and functional app. The testing phase ensures the application",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "functions properly by validating each feature, including search, add, delete, and dark mode toggling.",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "The project successfully meets its functional requirements, providing users with an intuitive movie",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "management system. With thorough testing using both White Box and Black Box techniques, the",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "system is robust, with minimal bugs. As it stands, the Movie List application serves as a strong",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "foundation for understanding basic React concepts and APIs.",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Future Scope",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "The Movie List project has significant potential for future enhancements and features. Some of the",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "possible improvements and extensions include:",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "User Authentication:",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Implement a login and registration system to allow users to save their personalized",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "movie lists and preferences.",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Movie Details:",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Add a feature to display detailed information about each movie, including a plot",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "summary, director, cast, etc., when a user clicks on a movie.",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Improved UI/UX:",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Enhance the UI with animations and transitions to make the application more",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "engaging and user-friendly.",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Consider adding responsive design features to ensure the app works seamlessly across",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "mobile devices, tablets, and desktops.",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Advanced Search and Filtering:",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Implement advanced search filters such as sorting by genre, rating, year, and more.",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Add pagination to manage large lists of movies or to provide infinite scrolling for a",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "better user experience",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Movie Ratings and Reviews:",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Allow users to rate movies and add reviews, creating a more interactive and social",
+      "page": 24
+    },
+    {
+      "level": "H3",
+      "text": "experience",
+      "page": 24
+    },
+    {
+      "level": "H3",
+      "text": "Offline Storage:",
+      "page": 24
+    },
+    {
+      "level": "H3",
+      "text": "Implement offline storage using localStorage or IndexedDB, so users can access their",
+      "page": 24
+    },
+    {
+      "level": "H3",
+      "text": "movie list even when not connected to the internet.",
+      "page": 24
+    },
+    {
+      "level": "H3",
+      "text": "Performance Optimization:",
+      "page": 24
+    },
+    {
+      "level": "H3",
+      "text": "Focus on performance improvements by lazy loading movie data or optimizing the",
+      "page": 24
+    },
+    {
+      "level": "H3",
+      "text": "API calls to reduce loading time.",
+      "page": 24
+    },
+    {
+      "level": "H3",
+      "text": "Integration with Other APIs:",
+      "page": 24
+    },
+    {
+      "level": "H3",
+      "text": "Integrate additional APIs (like TMDb or IMDb) to provide more comprehensive",
+      "page": 24
+    },
+    {
+      "level": "H3",
+      "text": "movie data and features.",
+      "page": 24
+    },
+    {
+      "level": "H3",
+      "text": "P a g e",
+      "page": 24
+    },
+    {
+      "level": "H3",
+      "text": "Asha M. Tarsadia Institute of Computer Science and Technology",
+      "page": 24
+    }
+  ]
+}

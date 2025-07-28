@@ -1,0 +1,30 @@
+{
+  "title": "Understanding AI",
+  "outline": [
+    {
+      "level": "H2",
+      "text": "Introduction",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "What is AI?",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "History of AI",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Applications",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Conclusion",
+      "page": 1
+    }
+  ]
+}
